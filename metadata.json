@@ -1,0 +1,5 @@
+{
+  "name": "Monster Jam Emulator",
+  "description": "A web-based, text-adventure game emulator powered by Gemini. Dive into a chaotic and unpredictable monster-collecting world where every choice shapes your journey.",
+  "requestFramePermissions": []
+}

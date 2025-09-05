@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Monster Jam Emulator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              'vt323': ['"VT323"', 'monospace'],
+            },
+            colors: {
+              'bg-dark': '#000000',
+              'crt-grey': '#4a4a4a',
+              'primary': '#ffffff',
+              'secondary': '#ffffff',
+              'accent': '#F2506E',
+              'surface': '#EAEAEA',
+              'text-light': '#ffffff',
+              'text-dark': '#222222',
+              'placeholder': '#888',
+            }
+          }
+        }
+      }
+    </script>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.1.1/",
+    "react": "https://aistudiocdn.com/react@^19.1.1",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.1.1/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.17.0"
+  }
+}
+</script>
+<style>
+  html, body, #root {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    background-color: #231942; /* Fallback color */
+    overflow: hidden; /* Prevent scrollbars on body */
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+  
+  .text-shadow-dark {
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.9);
+  }
+
+  /* --- INPUT & BUTTON ANIMATIONS --- */
+  .input-bar-input {
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .input-bar-input:focus {
+    border-color: #E040FB;
+    box-shadow: 0 0 15px rgba(224, 64, 251, 0.5);
+  }
+
+  .send-button {
+    transition: transform 0.15s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.2s;
+  }
+
+  .send-button:hover:not(:disabled) {
+    transform: scale(1.05);
+  }
+  
+  .send-button:active:not(:disabled) {
+    transform: scale(0.98);
+  }
+
+</style>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
